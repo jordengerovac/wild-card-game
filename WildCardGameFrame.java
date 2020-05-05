@@ -255,7 +255,7 @@ public class WildCardGameFrame extends JFrame {
         // text input from user
         BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
 
-        // Card/text io for UnoServer
+        // Card/text io for server
         inFromServer = new ObjectInputStream(clientSocket.getInputStream());
         outToServer = new ObjectOutputStream(clientSocket.getOutputStream());
 
@@ -277,7 +277,7 @@ public class WildCardGameFrame extends JFrame {
         }
     }
 
-    // Thread for handling Card io to/from UnoServer
+    // Thread for handling Card io to/from server
     private class receiveHandler extends Thread {
         ObjectInputStream in;
         ObjectOutputStream out;
